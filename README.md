@@ -1,0 +1,2 @@
+# IWantToBeADataEngineer
+studying data note
