@@ -1,0 +1,11 @@
+
+## [데이터 엔지니어링의 이해 1-Data Engineering and Big data](https://letzgorats.tistory.com/entry/Understanding-Data-Engineering)
+## [데이터 엔지니어링의 이해 2-Data engineers vs Data scientists](https://letzgorats.tistory.com/entry/Understanding-Data-Engineering-2)
+## [데이터 엔지니어링의 이해 3-The data pipeline](https://letzgorats.tistory.com/entry/Understanding-Data-Engineering-3-The-data-Pipeline)
+## [데이터 엔지니어링의 이해 4-Data structures](https://letzgorats.tistory.com/entry/Understanding-Data-Engineering-4-Data-structures)
+## [데이터 엔지니어링의 이해 5-SQL](https://letzgorats.tistory.com/entry/Understanding-Data-Engineering-5-SQL)
+## [데이터 엔지니어링의 이해 6-Data warehouses and Data lake](https://letzgorats.tistory.com/entry/Understanding-Data-Engineering-6-Data-warehouses-and-data-lakes)
+## [데이터 엔지니어링의 이해 7-Procesing data](https://letzgorats.tistory.com/entry/Understanding-Data-Engineering-7-Processing-data)
+## [데이터 엔지니어링의 이해 8-Scheduling data](https://letzgorats.tistory.com/entry/Understanding-Data-Engineering-8-Scheduling-data)
+## [데이터 엔지니어링의 이해 9-Parallel computing](https://letzgorats.tistory.com/entry/Understanding-Data-Engineering-9-Parallel-computing)
+## [데이터 엔지니어링의 이해 10-Cloud computing](https://letzgorats.tistory.com/entry/Understanding-Data-Engineering-10-Cloud-Computing)
