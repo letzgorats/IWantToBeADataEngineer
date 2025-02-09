@@ -20,6 +20,139 @@
 
 <hr>
 
+## Data Engineering Mini-Project
+
 #| Project                                     |  Check     |
 -|---------------------------------------------|------------|
 1|Analyzing Students' Mental Health            |✅          |
+
+
+## Skills - Spark
+#| Course                                     |  Check     | KeyWord             |
+-|---------------------------------------------|------------|--------------------|
+1| Introduction to Spark            |➡          |#                     |
+2| Big Data Fundamentals with PySpark            |         |#                     |
+3| Cleaning Data with PySpark                     |#                     |
+4| Feature Engineering with PySpark                     |#                     |
+5| Machine Learning with PySpark                     |#                     |
+6| Building Recommendation Engines with PySpark                    |#                     |
+7| Project - Building a Demand Forecasting Model      |             |#                      |
+
+
+## Skills - Containerization and Virtualization with Docker and Kubernetes
+#| Course                                     |  Check     | KeyWord             |
+-|---------------------------------------------|------------|--------------------|
+1| Containerization and Virtualization Concepts            |➡          |#                     |
+2| Introduction to Docker            |         |#                     |
+3| Introduction to Kubernetes                    |#                     |
+4| Intermediate Docker                     |#                     |
+
+
+## Data Analyst Course
+
+### Associate Data Analyst in SQL
+#| Course                                       | Note form                                                                                    | Check     | KeyWord             |
+-|----------------------------------------------|------------------------------------------------------------------------------------------------------|-----------|---------------------|
+1| Introduction to SQL                          | [Gituhub Note](./data_engineer/2.%20Introduction%20to%20SQL.md)                                      | ✅        |#전반적인 데이터엔지니어의 이해 |
+2| Intermediate SQL                             | [Gituhub Note](./data_engineer/3.%20Intermediate%20SQL.md)                                           | ✅        |#COUNT,집계함수,SQL 키워드,쿼리순서 |
+3| Joining Data in SQL                          | [Gituhub Note](./data_engineer/4.%20Joining%20Data%20with%20SQL.md)                                  | ✅        |#USING,InnerJoin,MultipleJoin,OuterJoin,LeftJoin,RightJoin,FullJoin,UNION,UNION ALL,INTERSECT,SEMI-JOINs,ANTI-JOINs,서브쿼리3가지유형                     |
+4| Data Manipulation in SQL                     | [Gituhub Note](./)        |    ➡     |   |
+5| PostgreSQL Summary Stats and Window Functions | [Gituhub Note](./)                                            |       |            |
+6| Functions for Manipulating Data in PostgreSQL | [Gituhub Note](./)                                |        |          |
+7| Introduction to Statistics                   | [Gituhub Note](./)                                |          |                     |
+8| Exploring Data Analyst in SQL             |                                                                                                      |          |                     |
+9| Data-Driven Decision Making in SQL             |                                                                                                      |          |                     |
+10| Understanding Data Visualization             |                                                                                                      |          |                     |
+11| Data Communication Concepts             |                                                                                                      |          |                     |
+
+### Associate Data Analyst in python
+#| Course                                       | Note form                                                                                    | Check     | KeyWord             |
+-|----------------------------------------------|------------------------------------------------------------------------------------------------------|-----------|---------------------|
+1| Introduction to Python                          | [Gituhub Note](./)                                      |         |# |
+2| Intermediate Python                             | [Gituhub Note](./)                                           |         |# |
+3| Data Manipulation with pandas                         | [Gituhub Note](./)                                  |         |#                    |
+4| Joining Data with pandas                | [Gituhub Note](./)        |         |   |
+5| Introduction to Statistics in Python | [Gituhub Note](./)                                            |       |            |
+6| Introduction to Data Visualization with Seaborn | [Gituhub Note](./)                                |        |          |
+7| Exploratory Data Analysis in Python                   | [Gituhub Note](./)                                |          |                     |
+8| Sampling in Python            |                                                                                                      |          |                     |
+9| Hypothesis Testing in Python             |                                                                                                      |          |                     |
+
+
+## Data Analyst Mini-Project
+
+#| Project                                     |  Check     |
+-|---------------------------------------------|------------|
+1|Analyzing Motorcycle Part Sales            |            |
+2|Investigating Netflix Movies            |            |
+3|Exploring NYC Public School Test Result Scores            |            |
+4|Visualizing the History of Nobel Prize Winners           |            |
+5|Data Manipulation with Python            |            |
+6|Importing & Cleaning Data with Python            |            |
+7|Analyzing Crime in Los Angeles            |            |
+8|Hypothesis Testing with Men's and Women's Soccer Matches            |            |
+
+
+
+## Data Scientist Course
+
+### Associate Data Scientist in Python
+#| Course                                       | Note form                                                                                    | Check     | KeyWord             |
+-|----------------------------------------------|------------------------------------------------------------------------------------------------------|-----------|---------------------|
+1| Introduction to Python                          | [Gituhub Note](./)                                      |         |# |
+2| Intermediate Python                             | [Gituhub Note](./)                                           |         |# |
+3| Data Manipulation with pandas                         | [Gituhub Note](./)                                  |         |#                    |
+4| Joining Data with pandas                | [Gituhub Note](./)        |         |   |
+5| Introduction to Statistics in Python | [Gituhub Note](./)                                            |       |            |
+6| Introduction to Data Visualization with Matplotlib | [Gituhub Note](./)                                |        |          |
+7| Introduction to Data Visualization with Seaborn | [Gituhub Note](./)                                |        |          |
+8| Introduction to Functions in Python             |                                                                                                      |          |                     |
+9| Python Toolbox             |                                                                                                      |          |                     |
+10| Exploratory Data Analysis in Python             |                                                                                                      |          |                     |
+11| Working with Categorical Data in Python             |                                                                                                      |          |                     |
+12| Data Communication Concepts             |  
+13| Introduction to Importing Data in Python             |  
+14| Cleaning Data in Python             |  
+15| Working with Dates and Times in Python             |  
+16| Writing Functions in Python            |  
+17| Introduction to Regression with statsmodels in Python            |  
+18| Sampling in Python           |  
+19| Hypothesis Testing in Python           |  
+20| Experimental Design in Python           |  
+21| Supervised Learning with scikit-learn           | 
+22| Unsupervised Learning with Python           | 
+23| Machine Learning with Tree-Based Models in Python           | 
+
+### Data Scientist in Python
+#| Course                                       | Note form                                                                                    | Check     | KeyWord             |
+-|----------------------------------------------|------------------------------------------------------------------------------------------------------|-----------|---------------------|
+1| Intermediate Importing Data in Python                          | [Gituhub Note](./)                                      |         |# |
+2| Preprocessing for Machine Learning in Python                             | [Gituhub Note](./)                                           |         |# |
+3| Developing Python Packages                         | [Gituhub Note](./)                                  |         |#                    |
+4| Machine Learning for Business                | [Gituhub Note](./)        |         |   |
+5| Introduction to SQL | [Gituhub Note](./)                                            |       |            |
+6| Intermediate SQL | [Gituhub Note](./)                                |        |          |
+7| Joining Data in SQL                   | [Gituhub Note](./)                                |          |                     |
+8| Introduction to Git            |                                                                                                      |          |                     |
+9| Intermediate Git             |                                                                                                      |          |                     |
+
+
+## Data Scientist Mini-Project
+
+#| Project                                     |  Check     |
+-|---------------------------------------------|------------|
+1|Investigating Netflix Movies            |            |
+2|Visualizing the History of Nobel Prize Winners            |            |
+3|Data Manipulation with Python           |            |
+4|Analyzing Crime in Los Angeles            |            |
+5|Customer Analytics:Preparing Data for Modeling            |            |
+6|Exploring Airbnb Market Trends            |            |
+7|Importing & Cleaning Data with Python            |            |
+8|Python Programming            |            |
+9|Modeling Car Insurance Claim Outcomes            |            |
+10|Hypothesis Testing with Men's and Women's Soccer Matches            |            |
+11|Predictive Modeling for Agriculture            |            |
+12|Clustering Antarctic Penguin Species            |            |
+13|Predicting Movie Rental Durations            |            |
+14|Analyzing Student's Mental Health           |            |
+15|When was the Golden Era of Video Games?            |            |
