@@ -25,7 +25,7 @@
 #| Project                                     |  Check     |
 -|---------------------------------------------|------------|
 1|Analyzing Students' Mental Health            |✅          |
-
+2|Exploring London's Travel Network            |✅          |
 
 ## Skills - Spark
 #| Course                                     |  Check     | KeyWord             |
