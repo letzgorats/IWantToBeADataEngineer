@@ -25,7 +25,7 @@
 #| Project                                     |  Check     |
 -|---------------------------------------------|------------|
 1|Analyzing Students' Mental Health            |✅          |
-2|Exploring London's Travel Network            |✅          |
+2|[Exploring London's Travel Network](./data_engineer/Project/Exploring%20London's%20Travel%20Network.md)            |✅          |
 
 ## Skills - Spark
 #| Course                                     |  Check     | KeyWord             |
