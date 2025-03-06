@@ -28,24 +28,25 @@
 2|[Exploring London's Travel Network](./data_engineer/Project/Exploring%20London's%20Travel%20Network.md)            |✅          |
 
 ## Skills - Spark
-#| Course                                     |  Check     | KeyWord             |
--|---------------------------------------------|------------|--------------------|
-1| Introduction to Spark            |➡          |#                     |
-2| Big Data Fundamentals with PySpark            |         |#                     |
-3| Cleaning Data with PySpark                     |#                     |
-4| Feature Engineering with PySpark                     |#                     |
-5| Machine Learning with PySpark                     |#                     |
-6| Building Recommendation Engines with PySpark                    |#                     |
-7| Project - Building a Demand Forecasting Model      |             |#                      |
+#| Course                                     |  Note form     | Check     | KeyWord             |
+-|---------------------------------------------|------------|--------------------|--------------------|
+1| Introduction to Spark            | [Gituhub Note]         |                     | #|
+2| Big Data Fundamentals with PySpark            |[Gituhub Note]         |                     |#|
+3| Cleaning Data with PySpark                     | [Gituhub Note]                    | |#|
+4| Feature Engineering with PySpark                     | [Gituhub Note]                    | |# |
+5| Machine Learning with PySpark                     | [Gituhub Note]                    | |# |
+6| Building Recommendation Engines with PySpark          |[Gituhub Note]                   |         |#|
+7| Project - Building a Demand Forecasting Model      |[Gituhub Note]             |                   |#   |
 
 
 ## Skills - Containerization and Virtualization with Docker and Kubernetes
-#| Course                                     |  Check     | KeyWord             |
--|---------------------------------------------|------------|--------------------|
-1| Containerization and Virtualization Concepts            |➡          |#                     |
-2| Introduction to Docker            |         |#                     |
-3| Introduction to Kubernetes                    |#                     |
-4| Intermediate Docker                     |#                     |
+#| Course                                     |  Note form     | Check     | KeyWord             |
+-|---------------------------------------------|------------|---------------|--------------------|
+1| Containerization and Virtualization Concepts| [Gituhub Note](./Skills/Containerization%20and%20Virtualization%20with%20Docker%20and%20Kubernetes/Containerization%20and%20Virtualization%20Concepts.md)             |➡          |#                     |
+2| Introduction to Docker            |[Gituhub Note]         |                    | # |
+3| Introduction to Kubernetes                    |[Gituhub Note]                     |  |# | 
+4| Intermediate Docker                     |[Gituhub Note]                     |  |# | 
+
 
 
 ## Data Analyst Course
