@@ -204,7 +204,92 @@
 <hr>
 <hr>
 
-## 
+## 컨테이너화(Containerization)와 도커(Docker)의 개념
+- 이전 챕터에서는 컨테이너화(Containerization)의 개념을 더욱 깊이 이해하고, 이를 가능하게 해주는 가장 대표적인 도구인 Docker 에 대해 살펴보자.
+
+## 1. 컨테이너(Container)란?
+- 컨테이너는 애플레케이션 실행하기 위한 독립적인 환경을 제공한다.
+- 컨테이너에는 애플리케이션이 정상적으로 실행도기 위해 필요한 `소스코드`,`라이브러리`,`종속성(Depenecies)`, `설정(Configuration)` 등이 포함된다.
+
+## 2. Docker란?
+- `Docker`는 컨테이너화(Containerization)를 쉽게 구현할 수 있도록 도와주는 `오픈 소스 플랫폼`이다.
+- `오픈 소스(Open-source)`란 `누구나 자유롭게 사용, 수정, 배포할 수 있는 소프트웨어`를 의미한다.
+- `Docker`가 인기 있는 이유
+  - `컨테이너 기술을 표준화`하여 `누구나 쉽게 사용할 수 있도록` 한다.
+  - `설치와 실행이 간편`하며, `개발 환경`과 `배포환경을 일치`시키는 데 유용하다.
+  - `Stack Overflow` 개발자 설문조사에서 가장 많이 사용되는 기술 중 하나로 선정된다.
+
+## 3. `Docker`의 핵심 역할
+- Docker는 `컨테이너 생성(Build)`, `배포(Distribute)`, `실행(Run) 및 관리(Manage)` 를 돕는 도구이다.
+- 즉, `컨테이너 라이프사이클을 관리하는 소프트웨어 플랫폼`이라고 할 수 있다.
+
+## 4. Docker의 주요 구성 요소
+- Docker의 아키텍처를 구성하는 중요한 요소들을 살펴보자.
+| 구성요소        |       설명  | 
+|---------------|-------------|
+|Docker Desktop|Mac, Linux, Windows 에서 Docker 를 실행할 수 있는 **GUI(그래픽 사용자 인터페이스)** 제공|
+|Docker Engine|Docker의 핵심 엔진으로, **컨테이너를 실행하는 서버**|
+|Docker CLI| **터미널(Command Line Interface)을 통해 Docker 명령어를 실행**할 수 있는 도구|
+|Docker Daemon| 컨테이너 실행, 이미지 빌드 등 **핵심 작업을 처리하는 백그라운드 프로세스**|
+|Docker 이미지(Image)| **컨테이너를 실행하기 위한 설정** 및 **파일이 포함된 불변(immutable) 템플릿**|
+|Docker 컨테이너(Container) | Docker 이미지 기반으로 실행되는 **독립적인 환경**|
+|Docker 레지스트리(Registry) | Docker **이미지를 저장하고 공유하는 공간**(ex.Docker Hub)|
+
+## 5. Docker 설치 및 실행
+- Docker를 사용하려면 먼저 **Docker Desktop 을 설치**해야 한다.
+- `Docker Desktop`은 Mac, Linux, Windows 에서 사용할 수 있으며, **GUI 환경**을 통해 컨테이너와 이미지를 쉽게 관리할 수 있다.
+- 또한, `Docker Desktop` 에는 `Docker Engine` 이 포함되어 있어 `명령줄 인터페이스(CLI)` 또는 `GUI` 를 이용해 `컨테이너를 실행`할 수 있다.
+
+## 6. `Docker` 의 클라이언트-서버 아키텍처
+- `Docker`는 `클라이언트-서버(Client-Server) 아키텍처`를 따른다.
+  - `Docker Client`(사용자 측) : **사용자가 Docker 명령어를 입력하는 인터페이스**(CLI 또는 Docker Desktop) 
+  - 'Docker Daemon`(서버 측) : Docker의 핵심 서비스로, **컨테이너를 실행하고 관리하는 역할을 담당**
+- 즉, **사용자는 `CLI` 또는 `GUI` 를 통해 명령을 입력**하면, **`Docker Daemon` 이 이를 받아 실행하는 방식**으로 동작한다.
+
+## 7. `Docker` 오브젝트 개요
+- Docker에서 다루는 주요 오브젝트는 다음과 같다.
+
+### Docker 이미지 (Image)
+- 컨테이너 실행을 위한 불변(Immutable) 템플릿
+- 애플리케이션 코드, 라이브러리, 실행 환경 등이 포함된다.
+- 하나의 이미지를 기반으로 여러 개의 컨테이너 생성 가능하다.
+
+### Docker 컨테이너 (Container)
+- Docker 이미지로부터 생성되는 실행 가능한 환경
+- 격리된 상태에서 애플리케이션 실행 가능
+- 필요할 때 빠르게 생성, 실행, 삭제 가능
+
+### Dockerfile : 이미지 생성의 기본
+- `Docker 이미지`는 `Dockerfile 이라는 설정 파일을 기반`으로 생성된다.
+- `Dockerfile` 은 `컨테이너를 빌드하는 설정 스크립트(Recipe) 역할`을 한다.
+```dockerfile
+FROM python:3.8  # Python 3.8 환경을 사용
+COPY . /app      # 현재 폴더의 파일을 컨테이너 내부로 복사
+WORKDIR /app     # 작업 디렉토리 설정
+RUN pip install -r requirements.txt  # 필요한 패키지 설치
+CMD ["python", "app.py"]  # 컨테이너 실행 시 실행할 명령어
+```
+
+### 아날로지(비유)로 이해하는 Docker 이미지 & 컨테이너
+- `Dockerfile` : 집을 짓기 위한 설계도(Recipe)
+- `Docker 이미지` : 설계도를 기반으로 만들어진 집 모델(House Model)
+- `Docker 컨테이너` : 실제로 지어진 완성진 집(Instance of House)
+즉, 같은 `Docker 이미지` 를 기반으로 `여러 개의 컨테이너`를 실행할 수 있다.
+
+## 8. Docker 이미지 공유 : Docker 레지스트리
+- Docker에서는 생성한 이미지를 Docker 레지스트리(Docker Registry)에 저장하고 공유할 수 있다.
+  - `Docker Hub` : 가장 널리 사용되는 퍼블릭(public) Docker 레지스트리
+  - `Private Registry` : 기업 내부에서 사용되는 프라이빗(private) 레지스트리
+- 개발자는 `Docker Hub` 또는 `자체 레지스트리`를 활용하여 `이미지를 쉽게 공유하고 배포`할 수 있다.
+
+## 9. 컨테이너 vs 가상 머신 : Docker의 장점
+
+![image](https://github.com/user-attachments/assets/37562f70-7411-400b-bc92-e8b0b0223b0a)
+
+- `Docker 컨테이너`는 `가볍고 빠르며`, `동일한 환경을 유지`할 수 있어 `배포 및 개발 효율성을 극대화`할 수 있다.
+
+
+
 
 
 
