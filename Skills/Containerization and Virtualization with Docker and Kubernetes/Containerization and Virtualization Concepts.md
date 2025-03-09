@@ -220,11 +220,23 @@
   - `Stack Overflow` 개발자 설문조사에서 가장 많이 사용되는 기술 중 하나로 선정된다.
 
 ## 3. `Docker`의 핵심 역할
+
+![image](https://github.com/user-attachments/assets/1c2b7274-90eb-45a9-abf2-aa288ca430ba)
+
 - Docker는 `컨테이너 생성(Build)`, `배포(Distribute)`, `실행(Run) 및 관리(Manage)` 를 돕는 도구이다.
 - 즉, `컨테이너 라이프사이클을 관리하는 소프트웨어 플랫폼`이라고 할 수 있다.
 
 ## 4. Docker의 주요 구성 요소
 - Docker의 아키텍처를 구성하는 중요한 요소들을 살펴보자.
+
+- Docker Desktop
+- Docker Engine
+  - Docker Client
+  - Docker Daemon
+- Docker Objects
+  - Docker Images
+  - Docker Containers
+- Docker Registries
 
 | 구성요소        |       설명    |
 |---------------|-------------|
@@ -242,13 +254,18 @@
 - 또한, `Docker Desktop` 에는 `Docker Engine` 이 포함되어 있어 `명령줄 인터페이스(CLI)` 또는 `GUI` 를 이용해 `컨테이너를 실행`할 수 있다.
 
 ## 6. `Docker` 의 클라이언트-서버 아키텍처
+
+![image](https://github.com/user-attachments/assets/edd8a474-0000-4245-b44f-d485e28aadaa)
+
 - `Docker`는 `클라이언트-서버(Client-Server) 아키텍처`를 따른다.
   - `Docker Client`(사용자 측) : **사용자가 Docker 명령어를 입력하는 인터페이스**(CLI 또는 Docker Desktop) 
-  - 'Docker Daemon`(서버 측) : Docker의 핵심 서비스로, **컨테이너를 실행하고 관리하는 역할을 담당**
+  - `Docker Daemon`(서버 측) : 클라이언트 요청이 수신된다. Docker의 핵심 서비스로, **컨테이너를 실행하고 관리하는 역할을 담당**한다. Docker를 사용할 때마다 실행되어야 한다.
 - 즉, **사용자는 `CLI` 또는 `GUI` 를 통해 명령을 입력**하면, **`Docker Daemon` 이 이를 받아 실행하는 방식**으로 동작한다.
 
 ## 7. `Docker` 오브젝트 개요
 - Docker에서 다루는 주요 오브젝트는 다음과 같다.
+
+![image](https://github.com/user-attachments/assets/335cc654-1b44-4693-8fca-b7a230a2e2fd)
 
 ### Docker 이미지 (Image)
 - 컨테이너 실행을 위한 불변(Immutable) 템플릿
@@ -261,8 +278,11 @@
 - 필요할 때 빠르게 생성, 실행, 삭제 가능
 
 ### Dockerfile : 이미지 생성의 기본
-- `Docker 이미지`는 `Dockerfile 이라는 설정 파일을 기반`으로 생성된다.
+- `Docker Image`는 `Dockerfile 이라는 설정 파일을 기반`으로 생성된다.
 - `Dockerfile` 은 `컨테이너를 빌드하는 설정 스크립트(Recipe) 역할`을 한다.
+- 즉, `Dockerfile` 을 사용하여 컨테이너에 대한 청사진을 구축하는데, 이 청사진을 `DockerImage` 라고 하는 것이다.
+
+(ex)
 ```dockerfile
 FROM python:3.8  # Python 3.8 환경을 사용
 COPY . /app      # 현재 폴더의 파일을 컨테이너 내부로 복사
@@ -278,7 +298,10 @@ CMD ["python", "app.py"]  # 컨테이너 실행 시 실행할 명령어
 즉, 같은 `Docker 이미지` 를 기반으로 `여러 개의 컨테이너`를 실행할 수 있다.
 
 ## 8. Docker 이미지 공유 : Docker 레지스트리
-- Docker에서는 생성한 이미지를 Docker 레지스트리(Docker Registry)에 저장하고 공유할 수 있다.
+
+![image](https://github.com/user-attachments/assets/8cedae30-d2a4-4bba-92be-91218bf51b30)
+
+- `Docker에서는 생성한 이미지`를 `Docker 레지스트리(Docker Registry)에 저장하고 공유`할 수 있다.
   - `Docker Hub` : 가장 널리 사용되는 퍼블릭(public) Docker 레지스트리
   - `Private Registry` : 기업 내부에서 사용되는 프라이빗(private) 레지스트리
 - 개발자는 `Docker Hub` 또는 `자체 레지스트리`를 활용하여 `이미지를 쉽게 공유하고 배포`할 수 있다.
@@ -289,12 +312,31 @@ CMD ["python", "app.py"]  # 컨테이너 실행 시 실행할 명령어
 
 - `Docker 컨테이너`는 `가볍고 빠르며`, `동일한 환경을 유지`할 수 있어 `배포 및 개발 효율성을 극대화`할 수 있다.
 
+<hr>
+<hr>
 
+## 컨테이너 오케스트레이션(Container Orchestration) 개념과 활용
+- 이전 챕터에서는 `Docker`를 활용한 컨테이너화(Containerization)의 개념과 실무 활용법을 다루었다.
+- 이번에는 여러 개의 컨테이너를 효과적으로 관리하는 방법인 **컨테이너 오케스트레이션(Container Orchestration)** 에 대해 정리해보자.
 
+## 1. 컨테이너 오케스트레이션이란?
+- `컨테이너 오케스트레이션(Container Orchestration)` 은 **여러 개의 컨테이너를 자동으로 관리 및 조율하는 기술** 이다.
 
+### 오케스트라에 비유
+- 컨테이너 오케스트레이션은 `오케스트라의 지휘자(Conductor)` 와 같다.
+- 오케스트라(Containers) : 각각의 개별 컨테이너
+- 지휘자(Container Orchestrator) : 컨테이너들이 조화롭게 동작하도록 관리
+- 즉, **각 컨테이너가 개별적으로 실행되는 것이 아니라, 전체 시스템이 유기적으로 동작하도록 조율하는 것이 핵심 역할** 이다.
 
+## 2. 컨테이너 오케스트레이션의 목적
+- `컨테이너 오케스트레이션`은 **대규모 컨테이너 환경을 쉽고 효율적으로 관리** 하기 위해 사용된다.
+  - `여러 개의 컨테이너가 협업하여 원활하게 동작`하도록 조정
+  - `자원을 최소한`으로 사용하면서도 `최적의 성능` 유지
+  - `자동화된 관리로 효율적인 운영` 가능
+- 이를 통해 **개발자와 운영팀이 컨테이너를 수동으로 관리하는 부담을 줄이고, 더 중요한 업무에 집중할 수 있도록 돕는다.**
 
-
+## 3. 선언전 프로그래밍(Declartive Programming) 과 오케스트레이션
+- 컨테이너 오케스트레이션은 **선언적 프로그래밍(Declartive Programming) 방식을 사용** 한다.
 
 
 
