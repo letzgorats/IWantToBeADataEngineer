@@ -42,7 +42,7 @@
 ## Skills - Containerization and Virtualization with Docker and Kubernetes
 #| Course                                     |  Note form     | Check     | KeyWord             |
 -|---------------------------------------------|------------|---------------|--------------------|
-1| Containerization and Virtualization Concepts| [Gituhub Note](./Skills/Containerization%20and%20Virtualization%20with%20Docker%20and%20Kubernetes/Containerization%20and%20Virtualization%20Concepts.md)             |➡          |#                     |
+1| Containerization and Virtualization Concepts| [Gituhub Note](./Skills/Containerization%20and%20Virtualization%20with%20Docker%20and%20Kubernetes/Containerization%20and%20Virtualization%20Concepts.md)             |✅         |#가상화,가상머신,Virtualization,Virtual Machine,VM,Full Virtualization,OS Virtualization,Storage Virtualization,Containerization,컨테이너화,컨테이너,OS수준의 가상화,컨테이너 오케스트레이션(Container Orchestration),마이크로서비스 아키텍처,Kubernetes,Docker,쿠버네티스,도커,도커의 클라이언트-서버 아키텍처,도커 데몬,Docker Object(Docker Image,Docker Container),Docker Registry,DockerHub,Dockerfile,도커파일,YAML,JSON,선언전 프로그래밍,확장성,자동화,비용절감 및 자원 최적화, 가용성 및 복구, 업데이트 및 롤백 지원,무중단 배포(Rolling Update),도커,쿠버네티스,pod,node,control plane,cluster,docker CLI,FROM,COPY,RUN,ENTRYPOINT,docker build,-t 옵션,태그,docker run,ADD,CMD |
 2| Introduction to Docker            |[Gituhub Note]         |                    | # |
 3| Introduction to Kubernetes                    |[Gituhub Note]                     |  |# | 
 4| Intermediate Docker                     |[Gituhub Note]                     |  |# | 
