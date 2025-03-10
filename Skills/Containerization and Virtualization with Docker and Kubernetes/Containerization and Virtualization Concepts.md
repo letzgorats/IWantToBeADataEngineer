@@ -435,11 +435,290 @@ spec:
 <hr>
 <hr>
 
-## 
+## Kubernetes 를 활용한 컨테이너 오케스트레이션
+- 이전 챕터에서 `컨테이너 오케스트레이션`(Container Orchestration)의 개념과 필요성에 대해 배웠다.
+- 이번에는 Kubernetes 를 중심으로 실제 컨테이너 오케스트레이션이 어떻게 이루어지는지 살펴보도록 하자.
+- Kubernetes(쿠버네티스)는 현재 가장 널리 사용되는 **컨테이너 오케스트레이션 도구** 이며, 많은 기업이 컨테이너 환경을 관리하기 위해 `Kubernetes`를 활용하고 있다.
+
+## 1. Kubernetes란?
+- `Kubernetes`(K8s)는 `컨테이너화된 애플리케이션`의 `배포`, `확장(Scailing)`, `관리(Management)`를 **자동화하는 오픈 소스 플랫폼**이다.
+- `K8s` 라는 약어는 `K` 와 `s` 사이에 `8개의 글자`가 있기 떄문에 붙여진 별칭이다.
+- 원래 `Google 이 개발` 했으며, 2014년에 오픈 소스 프로젝트로 공개되었고, 현재는 `Cloud Native Computing Foundation(CNCF)`에 의해 관리된다.
+- 많은 기업들이 Kubernetes를 사용하거나 도입을 검토하고 있을 만큼 업계 표준으로 자리잡고 있다.
+
+## 2. Kubernetes 의 특징
+
+![image](https://github.com/user-attachments/assets/eee44527-66c2-4dcb-8fff-9012ed8073f4)
+![image](https://github.com/user-attachments/assets/2aeeacde-4c35-47d5-b7e7-b6fbc8b83eb0)
+
+- 컨테이너를 `논리적 단위(Logical Unit)로 그룹화`
+- `분산 시스템(Distributed System)` 기반
+- `클라우드` 및 `온프레미스(On-Premise)환경`에서 `모두 운영 가능`
+- `자동화된 배포`, `확장성 제공`
+- 장애 발생 시 `자동 복구(Self-healing)` 지원
+
+- 즉, `Kubernetes`를 사용하면 컨테이너가 어떤 머신에서 실행되는지를 **직접 관리할 필요 없이, 자동으로 할당 및 배치할 수 있다.**
+
+## 3. Kubernetes 아키텍처 구성 요소
+- Kubernetes는 여러 개의 중요한 구성 요소로 이루어져 있으며, 이를 하나씩 살펴보자.
+
+### 1) `Pod` (가장 작은 배포 단위) - 최소 실행 단위
+
+![image](https://github.com/user-attachments/assets/2e38168e-0e74-439f-9c26-b93ebc9ec511)
+
+- `Pod`는 `Kubernetes`에서 **가장 작은 배포 단위**이며, `하나 이상의 컨테이너`로 구성된다.
+- `같은 Pod 내의 컨테이너`들은 `자원을 공유`하며, `같은 네트워크 주소를 사용`한다.
+- 즉, **여러 개의 컨테이너가 같은 작업을 수행하거나 협력해야 할 경우 Pod 내에서 함께 실행**된다.
+
+### 2) `Node` (하드웨어 단위) - 호스트 머신
+
+![image](https://github.com/user-attachments/assets/ff5fdf9c-b187-4738-9348-1ef521487eb8)
+
+- `Node`는 `Pod가 실행되는 호스트 머신`을 의미한다. - Kubernetes 에서 가장 작은 컴퓨팅 하드웨어 단위로 `Pool`을 나타낸다.
+- `물리적 서버(Physical Server)` 또는 `가상 머신(Virtual Machine)`일 수 있다.
+- `Node`는 실제 사용자 지정 머신이 아닌 `머신을 추상화`하므로 `모든 노드는 다른 노드로 쉽게 교체될 수 있으며` 모든 것이 동일하게 작동한다. - **특정 Pod 가 항상 동일한 Node 에서 실행되는 것은 아니다.**
+- Kubernetes는 Node들을 `클러스터(Cluster)`로 `묶어 관리`한다.
+
+### 3) `Control Plane` (노드 및 Pod 관리) - 클러스터 제어
+
+![image](https://github.com/user-attachments/assets/6adc2d1a-6cd7-4ee1-bfae-ff377be17361)
+
+- Control Plane(제어 평면)은 `클러스터를 관리`하고, `적절한 노드에 적절한 Pod를 배치하는 역할`을 한다. - **사용 가능한 Node 에 Pod를 스마트하게 할당하여 리소스를 할당**하는 역할을 한다.
+- `클러스터의 두뇌(Brain of the Cluster)`라고 불릴 만큼 중요한 요소이다.
+- 주요 역할
+  - `Pod`를 특정 `Node`에 자동 할당
+  - 리소스 사용량 최적화
+  - 장애 발생 시 컨테이너 자동 재시작
+
+### 4) `Cluster` (노드들의 모음) - 전체 시스템
+
+![image](https://github.com/user-attachments/assets/e4183c75-d252-4afd-9553-a92dee6d5dd3)
+
+- `Kubernetes 클러스터`에는 앞서 언급한 `모든 구성 요소가 포함`되어 있으며 최대 수천 개의 노드로 구성된 그룹이다. - **`여러 개의 Node가 모여` Kubernetes `클러스터를 형성`한다.**
+- `클러스터 내부의 Node`들은 `하나의 슈퍼 컴퓨터(Super-Machine)` 처럼 동작한다. - **`클러스터`에서는 `개별 노드의 리소스가 함께 풀링`(Pooing)되고 강력한 슈퍼 머신을 형성하는데, 이 슈퍼머신이 클러스터라고 할 수 있다.**
+- 사용자는 특정 Node가 아닌 `클러스터 자체에 애플리케이션을 배포`하면, `Kubernetes가 자동으로 적절한 Node에 배치`한다.
+
+### 정리
+![image](https://github.com/user-attachments/assets/8805c7fc-045c-443f-86a8-58d55ee8d8a9)
+
+## 4. Kubernetes 와 Docker 의 관계
+- Docker 와 Kubernetes 는 함께 사용될 수 있지만, 각각 다른 역할을 수행한다.
+
+![image](https://github.com/user-attachments/assets/41f0fb61-380b-4d37-ae32-b2cfd008d9e1)
+![image](https://github.com/user-attachments/assets/0a69a1a8-4370-409e-a40e-c0de8e0bf4f0)
+
+- `Docker` 는 개발자가 `컨테이너를 쉽게 생성하고 실행할 수 있도록 도와주는 도구` 이다.
+- `Kubernetes` 는 `수백~수천 개의 컨테이너를 효율적으로 배포, 확장 및 관리하는 데 최적화된 도구` 이다.
+- Kubernetes는 Docker 외에도 `Containerd` 같은 더 가벼운 컨테이너 런타임을 사용할 수도 있다.
+- 즉, `Docker`는 `개발자 경험(Developer Experience)에 초점`이 맞춰져 있고, `Kubernetes`는 `확장성과 자동화(Scalability & Automation)에 최적화`되어 있다.
+
+## 5. Kubernetes 의 주요 기능
+- `자동화된 컨테이너 배포 및 업데이트`
+- `자동 스케일링(Scailing)` : 트래픽 증가 시 Pod 개수 자동 증가
+- `자동 복구(Self-healing)` : 장애 발생 시 컨테이너 재시작
+- `로드 밸런싱(Load Balancing)` : `트래픽을 여러 Pod로 자동 분산`
+- `클러스터 내 모든 Node 리소스를 하나의 슈퍼 컴퓨터처럼 사용 가능`
+
+## 6. Kubernetes를 사용하는 이유
+- Kubernetes를 사용하면 `대규모 애플리케이션을 안정적으로 운영하고 관리`할 수 있다.
+
+### 1) 확장성이 뛰어남
+- **트래픽이 증가하면 `자동으로 Pod 를 확장하여 서비스 성능을 유지`한다.**
+- **사용량이 적을 때는 `자동으로 Pod 개수를 줄여 비용을 절감`한다.**
+
+### 2) 장애 복구 및 가용성 보장
+- `컨테이너가 다운되면 자동으로 새로운 컨테이너를 생성`한다.
+- **`서비스 중단 없이 운영`할 수 있다.**
+
+### 3) 효율적인 자원 관리
+- `여러 개의 Node`를 `하나의 클러스터로` 묶어 하드웨어 리소스를 최적화한다.
+- `필요한 곳에 적절한 컨테이너를 자동으로 배치`한다.
+
+### 4) 다양한 환경에서 운영 가능
+- `클라우드(AWS, GCP, Azure)` 및 `온프레미스(On-premise)` 환경 **모두 지원**한다.
+- **멀티 클라우드 및 하이브리드 클라우드 환경에서도 활용 가능**하다.
+
+<hr>
+<hr>
+
+## Dockerfile 읽기 및 컨테이너 실행하기
+- 이제까지 `Docker` 와 `Kubernetes`의 개념과 활용법을 배웠다면, 이번 챕터에서는 직접 `Docker 컨테이너를 실행하는 방법`을 배워본다.
+- 이를 위해 `Dockerfile을 작성하는 방법과 실행 명령어`에 대해 자세히 알아볼 것이다.
+
+## 1. Docker 개념 복습
+- Docker의 핵심 개념을 다시 한번 정리해보자.
+
+![image](https://github.com/user-attachments/assets/479dab17-98ee-438e-9fa9-dfd1e6369438)
+
+![image](https://github.com/user-attachments/assets/20a84748-c3d3-4156-a0fc-47b324506c20)
+
+- Dockerfile -> Docker Image -> Docker Container
+- 즉, `Dockerfile 을 기반`으로 `Docker 이미지를 빌드`하고, 이 이미지를 실행하면 `Docker 컨테이너가 생성`된다.
+
+## 2. Dockerfile 명령어 vs Docker CLI 명령어
+- Docker를 다룰 때, CLI(Command Line Interface) 명령어와 `Dockerfile 명령어`(Instruction) 를 구분해야 한다.
+
+![image](https://github.com/user-attachments/assets/96d2770c-db49-4036-822a-01520c2c9cec)
 
 
+- Dockerfile 명령어(Instruction) : `Docker 이미지`를 생성할 때 사용하는 **명령어** - **Dockerfile의 구성 요소**
+- DockerCLI 명령어(Commands) : `Docker container`를 실행 및 관리할 때 사용하는 **명령어** - **Docker 개체를 관리하기 위해 Docker Daemon으로 전송되는 명령어**
+
+![image](https://github.com/user-attachments/assets/17fe4823-2244-4742-9363-370f7122e86b)
+
+- 즉, `Dockerfile`은 `컨테이너를 만들기 위한 구성 파일`이고, `CLI 명령어`는 `컨테이너 실행 및 관리에 사용`된다.
+
+## 3. Dockerfile 작성 형식
+- Dockerfile의 기본 형식은 다음과 같다.
+
+### Dockerfile Instructions 형식 규칙
+1. 주석(Comment) : `#`기호로 시작
+2. 명령어(Command) : `대문자(Uppercase)` 로 작성
+3. 인수(Arguments) : `소문자(Lowercase)` 로 작성
+4. 작성 순서 : **위에서 아래로 순차적으로 실행**된다.
+
+- `Dockerfile`은 `메타데이터`, `주석`, `인수`로 시작할 수 있고, `FROM`command 로도 시작할 수 있다.
+
+## 4. 주요 Dockerfile 명령어
+
+### 1) `FROM`(베이스 이미지 설정)
+- Docker 이미지는 항상 `기존 이미지 기반으로 생성` 된다.
+- `FROM` 명령어는 `기본이미지(Base Image)` 를 설정한다.
+
+- 문법
+```dockerfile
+FROM <name_of_image>
+```
+
+- 예시
+```dockerfile
+# Define the image on which to build
+FROM python:3.8 # Python 3.8 이미지를 기반으로 생성
+```
+
+### 2) `COPY`(파일 복사)
+- `로컬 파일을 컨테이너 내부로 복사`할 때 사용한다.
+- `.`(점)은 `현재 디렉토리(current directory)`를 의미한다.
+
+- 문법
+```dockerfile
+COPY <source> <destination>
+```
+
+- 예시
+```dockerfile
+# COPY files/folders to the main folder of the container
+COPY . /app  # 현재 폴더의 모든 파일을 컨테이너 내부 `/app` 폴더로 복사  
+```
+
+### 3) `RUN`(명령어 실행)
+- `이미지 생성 중 실행할 명령어`를 정의한다.
+- 주로 `필요한 패키지 설치` 또는 `환경설정`에 사용된다.
+- 컴퓨터의 CLI 에서 명령어를 실행하는 방법과 유사하다.
+
+- 문법
+```dockerfile
+RUN <command>
+```
+
+- 예시
+```dockerfile
+RUN pip install -r requirements.txt # 필요한 Python 패키지 설치
+```
+
+### 4) `ENTRYPOINT`(컨테이너 실행 시 기본 실행 파일)
+- 컨테이너가 실행될 때 **`기본으로 실행할 명령어`를 정의**한다.
+
+- 문법
+```dockerfile
+ENTRYPOINT ["command", "argument"]
+```
+
+- 예시
+```dockerfile
+# Run the script when the container starts
+ENTRYPOINT ["python", "app.py"] # 컨테이너 실행 시 Python 애플리케이션 app.py 실행
+```
+
+## 5. Dockerfile 예제
+- 위의 명령어들을 조합하여 간단한 `Dockerfile`을 만들 수 있다.
+```dockerfile
+# 1. Python 3.8 을 기반으로 컨테이너 생성
+FROM python:3.8
+
+# 2. 현재 디렉토리의 파일을 /app 폴더로 복사
+COPY . /app
+
+# 3. 작업 디렉토리를 /app으로 설정
+WORKDIR /app
+
+# 4. 필요한 패키지 설치
+RUN pip install -r requirements.txt
+
+# 5. 애플리케이션 실행
+ENTRYPOINT ["python","app.py"]
+```
+
+## 6. Docker 이미지 및 컨테이너 실행
+- 이제 Dockerfile 을 사용하여 이미지를 빌드하고 컨테이너를 실행하는 방법을 알아보자.
+
+### 1) `docker build`(이미지 빌드)
+- `docker build` 명령어를 사용하여 `Dockerfile`을 기반으로 `Docker 이미지를 생성` 할 수 있다.
+- `dockerfile`은 CLI에서 명령을 실행할 때 **빌드되는 곳에 위치되어야 한다.** - <context> 바깥의 파일은 Dockerfile에서 `COPY` 하려고 하면, 오류가 발생한다.
+
+- 문법
+```sh
+## <context>는 빌드 컨텍스트를 의미한다. dockerfile은 반드시 빌드 컨텍스트 내부에 있어야 한다.
+docker build (-t) <이미지 이름>:<태그> <context>
+```
+- 예시
+```sh
+docker build -t my-image .
+```
+- `-t my-image` : 생성할 이미지에 'my-image'라는 이름을 설정 - **<태그>가 생략되면 자동으로 `latest'라는 태그가 붙는다.**
+- `.` : **현재 디렉토리의 Dockerfile을 사용하여 빌드**
+- 빌드가 완료되면 `Docker 이미지가 생성` 된다.
+
+### -t (태그) 옵션
+- `-t` 옵션을 지정하지 않으면, Docker는 이름이 없는 이미지(untagged image)를 자동 생성한다.
+- 이렇게 생성된 이미지는 `docker images` 명령어로 확인하면 이름 대신 **`ID로 표시`** 된다. - 나중에 컨테이너를 실행할 때, 이미지 ID를 직접 입력해야 하는 불편함이 있다.
+
+(ex)
+```nginx
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+<none>       <none>    5d3b2c123abc   3 minutes ago  125MB
+```
+- 보통 `-t` 옵션을 사용할 때 이미지 이름 규칙은 `<이름>:<태그>` 형식으로 작성한다.
+- **<태그>가 생략되면 자동으로 `latest'라는 태그가 붙는다.**
+```sh
+docker build -t my-image:latest .
+docker build -t myapp:v1 .
+docker build -t backend:v2 .
+docker build -t myrepo/myapp:1.0 .
+
+# 이미지 이름을 Docker Hub 또는 개인 레지스트리에 업로드 할 경우
+docker build -t myusername/my-image:1.0 . # myusername/my-iamge : Docker Hub의 `myusername` 계정 아래 저장된다.
+```
+
+![image](https://github.com/user-attachments/assets/64232e92-bfcc-4183-8908-e1e6d3d77231)
 
 
+### 2) `docker run`(컨테이너 실행)
+- `docker run` 명령어를 사용하여 'Docker 이미지`에서 `Docker 컨테이너를 생성하고 실행`할 수 있다.
 
+- 문법
+```sh
+docker run <name_of_image>
+```
 
+```sh
+docker run my-image
+```
+- `my-image` : 실행할 Docker 이미지 이름
+- 이제 `my-image` 기반의 컨테이너가 실행되며, `ENTRYPOINT`에 설정된 `app.py`가 자동으로 실행된다.
 
+### 추가질문 & 답변
+![image](https://github.com/user-attachments/assets/cfa7e396-93c7-4de3-aad6-62c9fc4c159b)
+
+<hr>
+<hr>
