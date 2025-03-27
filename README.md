@@ -8,7 +8,7 @@
 
 #| Course                                       | Note form                                                                                    | Check     | KeyWord             |
 -|----------------------------------------------|------------------------------------------------------------------------------------------------------|-----------|---------------------|
-1| Understanding  Data Engineer                 | [Blog Note](./data_engineer/1.%20understanding%20data%20engineering.md)                              | ✅        |#전반적인 데이터엔지니어의 이해 |
+1| Understanding Data Engineer                 | [Blog Note](./data_engineer/1.%20understanding%20data%20engineering.md)                              | ✅        |#전반적인 데이터엔지니어의 이해 |
 2| Introduction to SQL                          | [Gituhub Note](./data_engineer/2.%20Introduction%20to%20SQL.md)                                      | ✅        |#alias를 쓰는 이유 |
 3| Intermediate SQL                             | [Gituhub Note](./data_engineer/3.%20Intermediate%20SQL.md)                                           | ✅        |#COUNT,집계함수,SQL 키워드,쿼리순서 |
 4| Joining Data in SQL                          | [Gituhub Note](./data_engineer/4.%20Joining%20Data%20with%20SQL.md)                                  | ✅        |#USING,InnerJoin,MultipleJoin,OuterJoin,LeftJoin,RightJoin,FullJoin,UNION,UNION ALL,INTERSECT,SEMI-JOINs,ANTI-JOINs,서브쿼리3가지유형                     |
@@ -20,6 +20,24 @@
 
 <hr>
 
+### Data Engineer in Python
+#| Course                                       | Note form                                                                                    | Check     | KeyWord             |
+-|----------------------------------------------|------------------------------------------------------------------------------------------------------|-----------|---------------------|
+1| Understanding Cloud Computing                 | [Gituhub Note](./data_engineer/python/1.%20understanding%20data%20engineering.md)                              | ✅        |# |
+2| Introduction to Python for Developers                 | [Gituhub Note](./data_engineer/python/2.%20Introduction%20to%20Python%20for%20Developers.md)                              | ✅        |# |
+3| Intermediate Python for Developers                 | [Gituhub Note](./data_engineer/python/3.%20Intermediate%20Python%20for%20Developers.md)                              | ✅        |# |
+4| Introduction to Importing Data in Python                 | [Gituhub Note](./data_engineer/python/4.%20Introduction%20to%20Importing%20Data%20in%20Python.md)                              | ✅        |# |
+5| Intermediate Importing Data in Python                 | [Gituhub Note](./data_engineer/python/5.%20Intermediate%20Importing%20Data%20in%20Python.md)                              | ✅        |# |
+6| Introduction to APIs in Python                 | [Gituhub Note](./data_engineer/python/6.%20Introduction%20to%20APIs%20in%20Python.md)                              | ✅        |# |
+7| Cleaning Data in Python                 | [Gituhub Note](./data_engineer/python/7.%20Cleaning Data%20in%20Python.md)                              | ✅        |# |
+8| Writing Efficient Python Code                 | [Gituhub Note](./data_engineer/python/8.%20Writing%20Efficient%20Python%20Code.md)                              | ✅        |# |
+9| Streamlined Data Ingestion with pandas                 | [Gituhub Note](./data_engineer/python/9.%20Streamlined%20Data%20Ingestion%20with%20pandas.md)                              | ✅        |# |
+10| Introduction to Git                 | [Gituhub Note](./data_engineer/python/10.%20Introduction%20to%20Git.md)                              | ✅        |# |
+11| Intermediate Git                 | [Gituhub Note](./data_engineer/python/11.%20Intermediate%20Git.md)                              | ✅        |# |
+12| Software Engineering Principles in Python                 | [Gituhub Note](./data_engineer/python/12.%20Software%20Engineering%20Principles%20in%20Python.md)                     | ✅        |# |
+13| ETL and ELT in Python                 | [Gituhub Note](./data_engineer/python/13.%20ETL%20and%20ELT%20in%20Python.md)                              | ✅        |# |
+14| Introduction to Apache Airflow in Python                 | [Gituhub Note](./data_engineer/python/14.%20Introduction%20to%20Apache%20Airflow%20in%20Python.md)         | ✅        |# |
+
 ## Data Engineering Mini-Project
 
 #| Project                                     |  Check     |
@@ -27,7 +45,10 @@
 1|[Analyzing Students' Mental Health](./data_engineer/Project/Analyzing%20Students'%20Mental%20Health.md)            |✅          |
 2|[Exploring London's Travel Network](./data_engineer/Project/Exploring%20London's%20Travel%20Network.md)            |✅          |
 3|[Insurance Upgrades](./data_engineer/Project/Insurance%20Upgrades.md)                                              |✅          |
-4|                                                                                                              |                  |
+4|[Cleaning Bank Marketing Campaign Data](./data_engineer/python/Project/Cleaning%20Bank%20Marketing%20Campaign%20Data.md)          |             |
+5|[Performing a Code Review](./data_engineer/python/Project/Performing%20a%20Code%20Review.md)          |             |
+6|[Building a Retail Data Pipeline](./data_engineer/python/Project/Building%20a%20Retail%20Data%20Pipeline.md)          |             |
+7|[Cleaning Data in Python](./data_engineer/python/Project/Cleaning%20Data%20in%20Python.md)          |             |
 
 
 ## Skills - Spark
