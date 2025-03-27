@@ -26,6 +26,9 @@
 -|---------------------------------------------|------------|
 1|[Analyzing Students' Mental Health](./data_engineer/Project/Analyzing%20Students'%20Mental%20Health.md)            |✅          |
 2|[Exploring London's Travel Network](./data_engineer/Project/Exploring%20London's%20Travel%20Network.md)            |✅          |
+3|[Insurance Upgrades](./data_engineer/Project/Insurance%20Upgrades.md)                                              |✅          |
+4|                                                                                                              |                  |
+
 
 ## Skills - Spark
 #| Course                                     |  Note form     | Check     | KeyWord             |
