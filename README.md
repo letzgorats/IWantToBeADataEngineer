@@ -29,7 +29,7 @@
 4| Introduction to Importing Data in Python                 | [Gituhub Note](./data_engineer/python/4.%20Introduction%20to%20Importing%20Data%20in%20Python.md)                              | ✅        |# |
 5| Intermediate Importing Data in Python                 | [Gituhub Note](./data_engineer/python/5.%20Intermediate%20Importing%20Data%20in%20Python.md)                              | ✅        |# |
 6| Introduction to APIs in Python                 | [Gituhub Note](./data_engineer/python/6.%20Introduction%20to%20APIs%20in%20Python.md)                              | ✅        |# |
-7| Cleaning Data in Python                 | [Gituhub Note](./data_engineer/python/7.%20Cleaning Data%20in%20Python.md)                              | ✅        |# |
+7| Cleaning Data in Python                 | [Gituhub Note](./data_engineer/python/7.%20Cleaning%20Data%20in%20Python.md)                              | ✅        |# |
 8| Writing Efficient Python Code                 | [Gituhub Note](./data_engineer/python/8.%20Writing%20Efficient%20Python%20Code.md)                              | ✅        |# |
 9| Streamlined Data Ingestion with pandas                 | [Gituhub Note](./data_engineer/python/9.%20Streamlined%20Data%20Ingestion%20with%20pandas.md)                              | ✅        |# |
 10| Introduction to Git                 | [Gituhub Note](./data_engineer/python/10.%20Introduction%20to%20Git.md)                              | ✅        |# |
