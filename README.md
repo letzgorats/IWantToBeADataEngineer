@@ -23,7 +23,7 @@
 ### Data Engineer in Python
 #| Course                                       | Note form                                                                                    | Check     | KeyWord             |
 -|----------------------------------------------|------------------------------------------------------------------------------------------------------|-----------|---------------------|
-1| Understanding Cloud Computing                 | [Gituhub Note](./data_engineer/python/1.%20Understanding%20data%20engineering.md)                              | ✅        |# |
+1| Understanding Cloud Computing                 | [Gituhub Note](./data_engineer/python/1.%20Understanding%20Cloud%20Computing.md)                              | ✅        |# |
 2| Introduction to Python for Developers                 | [Gituhub Note](./data_engineer/python/2.%20Introduction%20to%20Python%20for%20Developers.md)                              | ✅        |# |
 3| Intermediate Python for Developers                 | [Gituhub Note](./data_engineer/python/3.%20Intermediate%20Python%20for%20Developers.md)                              | ✅        |# |
 4| Introduction to Importing Data in Python                 | [Gituhub Note](./data_engineer/python/4.%20Introduction%20to%20Importing%20Data%20in%20Python.md)                              | ✅        |# |
