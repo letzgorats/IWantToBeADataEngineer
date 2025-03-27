@@ -8,7 +8,7 @@
 
 #| Course                                       | Note form                                                                                    | Check     | KeyWord             |
 -|----------------------------------------------|------------------------------------------------------------------------------------------------------|-----------|---------------------|
-1| Understanding Data Engineer                 | [Blog Note](./data_engineer/1.%20Understanding%20data%20engineering.md)                              | ✅        |#전반적인 데이터엔지니어의 이해 |
+1| Understanding Data Engineer                 | [Blog Note](./data_engineer/1.%20understanding%20data%20engineering.md)                              | ✅        |#전반적인 데이터엔지니어의 이해 |
 2| Introduction to SQL                          | [Gituhub Note](./data_engineer/2.%20Introduction%20to%20SQL.md)                                      | ✅        |#alias를 쓰는 이유 |
 3| Intermediate SQL                             | [Gituhub Note](./data_engineer/3.%20Intermediate%20SQL.md)                                           | ✅        |#COUNT,집계함수,SQL 키워드,쿼리순서 |
 4| Joining Data in SQL                          | [Gituhub Note](./data_engineer/4.%20Joining%20Data%20with%20SQL.md)                                  | ✅        |#USING,InnerJoin,MultipleJoin,OuterJoin,LeftJoin,RightJoin,FullJoin,UNION,UNION ALL,INTERSECT,SEMI-JOINs,ANTI-JOINs,서브쿼리3가지유형                     |
@@ -23,7 +23,7 @@
 ### Data Engineer in Python
 #| Course                                       | Note form                                                                                    | Check     | KeyWord             |
 -|----------------------------------------------|------------------------------------------------------------------------------------------------------|-----------|---------------------|
-1| Understanding Cloud Computing                 | [Gituhub Note](./data_engineer/python/1.%20understanding%20data%20engineering.md)                              | ✅        |# |
+1| Understanding Cloud Computing                 | [Gituhub Note](./data_engineer/python/1.%20Understanding%20data%20engineering.md)                              | ✅        |# |
 2| Introduction to Python for Developers                 | [Gituhub Note](./data_engineer/python/2.%20Introduction%20to%20Python%20for%20Developers.md)                              | ✅        |# |
 3| Intermediate Python for Developers                 | [Gituhub Note](./data_engineer/python/3.%20Intermediate%20Python%20for%20Developers.md)                              | ✅        |# |
 4| Introduction to Importing Data in Python                 | [Gituhub Note](./data_engineer/python/4.%20Introduction%20to%20Importing%20Data%20in%20Python.md)                              | ✅        |# |
