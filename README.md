@@ -72,7 +72,7 @@
 ### Associate Data Analyst in python
 #| Course                                       | Note form                                                                                    | Check     | KeyWord             |
 -|----------------------------------------------|------------------------------------------------------------------------------------------------------|-----------|---------------------|
-1| Introduction to Python                          | [Gituhub Note](./data_analyst/Associate%20Data%20Analyst%20in%20python/1.Introduction%20to%20Python.md)                                      |  ➡        |# |
+1| Introduction to Python                          | [Gituhub Note](./data_analyst/Associate%20Data%20Analyst%20in%20python/1.Introduction%20to%20Python.md)                                      |  ✅         |# |
 2| Intermediate Python                             | [Gituhub Note](./)                                           |         |# |
 3| Data Manipulation with pandas                         | [Gituhub Note](./)                                  |         |#                    |
 4| Joining Data with pandas                | [Gituhub Note](./)        |         |   |
