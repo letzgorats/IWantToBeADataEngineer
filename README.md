@@ -93,8 +93,8 @@
 ### Associate Data Analyst in python
 #| Course                                       | Note form                                                                                    | Check     | KeyWord             |
 -|----------------------------------------------|------------------------------------------------------------------------------------------------------|-----------|---------------------|
-1| Introduction to Python                          | [Gituhub Note](./data_analyst/Associate%20Data%20Analyst%20in%20python/1.Introduction%20to%20Python.md)                                      |  ✅         |# |
-2| Intermediate Python                             | [Gituhub Note](./)                                           |         |# |
+1| Introduction to Python                          | [Gituhub Note](./data_analyst/Associate%20Data%20Analyst%20in%20python/1.Introduction%20to%20Python.md)                                      |  ✅         |#numpy |
+2| Intermediate Python                             | [Gituhub Note](./data_analyst/Associate%20Data%20Analyst%20in%20python/2.Intermediate%20Python.md)                                           |         |#matplotlib,dictionaries,pandas,logic,control flow and filtering,loops,hacker statistics |
 3| Data Manipulation with pandas                         | [Gituhub Note](./)                                  |         |#                    |
 4| Joining Data with pandas                | [Gituhub Note](./)        |         |   |
 5| Introduction to Statistics in Python | [Gituhub Note](./)                                            |       |            |
