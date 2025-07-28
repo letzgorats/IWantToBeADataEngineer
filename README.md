@@ -23,7 +23,7 @@
 ### Data Engineer in Python
 #| Course                                       | Note form                                                                                    | Check     | KeyWord             |
 -|----------------------------------------------|------------------------------------------------------------------------------------------------------|-----------|---------------------|
-1| Understanding Cloud Computing                 | [Gituhub Note](./data_engineer/python/1.%20Understanding%20Cloud%20Computing.md)                              | ✅        |#`클라우드 컴퓨팅 정의` , `IaaS PaaS SaaS 차이` , `클라우드 장점` , `클라우드 서비스 모델` , `AWS Azure GCP 비교` , `서버리스` , `클라우드 입문` |
+1| Understanding Cloud Computing                 | [Gituhub Note](./data_engineer/python/1.%20Understanding%20Cloud%20Computing.md)                              | ✅        |#`클라우드 컴퓨팅 정의` , `IaaS PaaS SaaS 차이` , `클라우드 장점` , `클라우드 서비스 모델` , `AWS Azure GCP 비교` , `서버리스` , `클라우드 입문`, `클라우드 배포 모델`, `Public Private Hybrid Cloud`, `GDPR 클라우드`, `Cloud Architect`, `클라우드 직무`, `DevOps Engineer`, `Cloud Security Enginee` |
 2| Introduction to Python for Developers                 | [Gituhub Note](./data_engineer/python/2.%20Introduction%20to%20Python%20for%20Developers.md)                              | ✅        |# |
 3| Intermediate Python for Developers                 | [Gituhub Note](./data_engineer/python/3.%20Intermediate%20Python%20for%20Developers.md)                              | ✅        |# |
 4| Introduction to Importing Data in Python                 | [Gituhub Note](./data_engineer/python/4.%20Introduction%20to%20Importing%20Data%20in%20Python.md)                              | ✅        |# |
